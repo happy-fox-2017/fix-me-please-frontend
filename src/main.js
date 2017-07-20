@@ -4,9 +4,13 @@ import Vue from 'vue'
 import VueFire from 'vuefire'
 import axios from 'axios'
 import App from './App'
-import router from 'router'
+import router from './router'
+import VueRouter from 'vue-router'
 import VueMaterial from 'vue-material'
 import 'vue-material/dist/vue-material.css'
+
+Vue.use(VueRouter)
+
 import firebase from 'firebase'
 const config = {
   apiKey: 'AIzaSyBqyuyv9cLau8z4pv6U_FDJvf2sR11PlDc',
