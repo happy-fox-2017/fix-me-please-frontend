@@ -34,6 +34,7 @@
 </template>
 
 <script>
+import {firebaseApp} from '@/firebase'
 export default {
   data () {
     return {
@@ -59,7 +60,7 @@ export default {
     },
     postCat () {
       console.log('postCat ', this.randomCat)
-      this.$db.ref('cats').push(this.randomCat, () => {
+      firebaseApp.database().ref('cats').push(this.randomCat, () => {
         this.$router.push('/')
       })
     }

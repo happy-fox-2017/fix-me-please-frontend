@@ -17,14 +17,18 @@
 </template>
 
 <script>
+import {firebaseApp} from '@/firebase'
 export default {
-  props: ['id'],
-  firebase () {
+  data () {
     return {
-      cat: {
-        asObject: true,
-        source: this.$db.ref('cats').child(this.id)
-      }
+      cat: {}
+    }
+  },
+  props: ['id'],
+  firebase: {
+    cat: {
+      asObject: true,
+      source: firebaseApp.database().ref('cats').child(this.id)
     }
   }
 }
