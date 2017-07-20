@@ -17,6 +17,7 @@ const firebaseApp = firebase.initializeApp(config)
 
 Vue.prototype.$http = axios
 Vue.prototype.$db = firebaseApp.database()
+Vue.use(firebase)
 Vue.use(VueFire)
 Vue.use(VueMaterial)
 
