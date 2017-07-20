@@ -47,7 +47,7 @@ export default {
     }
   },
   methods: {
-    getCat() {
+    getCat () {
       this.$http.get('http://random.cat/meow')
         .then((response) => {
           this.randomCat.url = response.data.file
