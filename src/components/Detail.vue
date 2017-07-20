@@ -5,7 +5,7 @@
         <div class="md-title">{{ cat.comment }}</div>
       </md-card-header-text>
     </md-card-header>
-
+ <h1>TESSSS</h1>
     <md-card-media>
       <img :src="cat.url" :alt="cat.comment">
     </md-card-media>
@@ -23,9 +23,9 @@ export default {
     return {
       cat: {
         asObject: true,
-        source: this.$db.ref('cats').child(this.id),
+        source: this.$db.ref('cats').child(this.id)
       }
-    },
+    }
   }
 }
 </script>
