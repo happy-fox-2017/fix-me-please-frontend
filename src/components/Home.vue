@@ -20,15 +20,21 @@
 </template>
 
 <script>
+import {firebaseApp} from '@/firebase'
 export default {
-  firebase () {
-    {
-      cats: this.$db.ref('cats');
+  data () {
+    return {
+      cats: []
+    }
+  },
+  firebase: {
+    cats: {
+      source: firebaseApp.database().ref('cats')
     }
   },
   computed: {
-    latestCats: {
-      this.cats.reverse()
+    latestCats: function () {
+      return this.cats.reverse()
     }
   }
 }
