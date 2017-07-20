@@ -31,11 +31,14 @@ export default {
       cats: this.$db.ref('cats')
     }
   },
-  computed: {
+  methods: {
     latestCats () {
       this.listCat = this.cats.reverse()
       console.log(this.cats.reverse())
     }
+  },
+  created () {
+    this.latestCats()
   }
 }
 </script>
