@@ -27,7 +27,7 @@
       </md-card-content>
 
       <md-card-actions>
-        <md-button type="button" class="md-raised md-primary" @click.native="postCat">Post</md-button>
+        <md-button type="button" class="md-raised md-primary" @click.native="postCat()">Post</md-button>
       </md-card-actions>
     </md-card>
   </div>

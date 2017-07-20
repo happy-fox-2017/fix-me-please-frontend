@@ -23,8 +23,10 @@
             <span>Home</span>
           </md-list-item>
           <md-list-item @click.native="toggleSideNavLeft('/post')">
+               <!--  -->
             <md-icon>add</md-icon>
-            <span>New Post</span>
+            <span> New Post</span>
+            <button type="button" name="button"><router-link to="post">Post</router-link></button>
           </md-list-item>
         </md-list>
       </div>
