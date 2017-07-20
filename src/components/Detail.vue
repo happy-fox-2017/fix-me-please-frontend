@@ -13,6 +13,7 @@
     <md-card-content>
       {{ cat.detail }}
     </md-card-content>
+    <md-button @click="deleteGoGo(cat['.key'])">Delete</md-button>
   </md-card>
 </template>
 
@@ -23,12 +24,21 @@ export default {
     return {
       cat: {
         asObject: true,
-        source: this.$db.ref('cats').child(this.id),
+        source: this.$db.ref('cats').child(this.id)
       }
-    },
+    }
+  },
+  methods: {
+    deleteGoGo (id) {
+      this.$db.ref('cats').child(id).remove()
+      this.$router.push('/')
+    }
   }
 }
 </script>
 
 <style lang="css">
+button {
+  width: 10%;
+}
 </style>
