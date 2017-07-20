@@ -23,7 +23,7 @@
 export default {
   firebase () {
     return {
-      cats: this.$db.ref('cats');
+      cats: this.$db.ref('cats')
     }
   },
   computed: {
