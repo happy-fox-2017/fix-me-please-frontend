@@ -13,9 +13,7 @@
     <md-card-content>
       {{ cat.detail }}
     </md-card-content>
-    <md-card-footer>
-      <md-button @click="deleteGoGo(cat['.key'])">Delete</md-button>
-    </md-card-footer>
+    <md-button @click="deleteGoGo(cat['.key'])">Delete</md-button>
   </md-card>
 </template>
 
@@ -40,4 +38,7 @@ export default {
 </script>
 
 <style lang="css">
+button {
+  width: 10%;
+}
 </style>
